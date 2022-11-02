@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +6,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Imperial Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Imperial</title>
+  <meta content="Imperial is a single page website for Imperial Studio" name="description">
+  <meta content="Imperial is a single page website for Imperial Studio" name="keywords">
 
   <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
   <meta property="og:title" content="">
@@ -24,21 +25,21 @@
   <meta name="twitter:image" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Imperial - v5.9.1
@@ -55,7 +56,7 @@
     <div class="hero-container">
       <div data-aos="fade-in">
         <div class="hero-logo">
-          <img class="" src="assets/img/logo.png" alt="Imperial">
+          <img class="" src="{% static 'img/logo.png' %}" alt="Imperial">
         </div>
 
         <h1>Welcome to Imperial studios</h1>
@@ -72,7 +73,7 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>
+      <a href="{% url 'website:index' %}" class="logo mr-auto"><img src="{% static 'img/logo.png' %}" alt="Imperial"></a>
       <!-- Uncomment below if you prefer to use a text logo -->
       <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
 
@@ -84,23 +85,6 @@
           <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -126,7 +110,7 @@
         <div class="row">
 
           <div class="col-lg-6 about-img">
-            <img src="assets/img/about-img.jpg" alt="">
+            <img src="{% static 'img/about-img.jpg' %}" alt="Imperial">
           </div>
 
           <div class="col-md-6 about-content">
@@ -202,7 +186,7 @@
             <p class="subscribe-text">Join our 1000+ subscribers and get access to the latest tools, freebies, product announcements and much more!</p>
           </div>
           <div class="col-md-4 subscribe-btn-container">
-            <a class="subscribe-btn" href="#">Subscribe Now</a>
+            <a class="subscribe-btn" href="#contact">Subscribe Now</a>
           </div>
         </div>
       </div>
@@ -233,92 +217,92 @@
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <img src="{% static 'img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="Imperial">
             <div class="portfolio-info">
               <h4>App 1</h4>
               <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              <a href="{% static 'img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bi bi-plus"></i></a>
+              <a href="{% url 'website:portfolio' %}" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <img src="{% static 'img/portfolio/portfolio-2.jpg' %}" class="img-fluid" alt="Imperial">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              <a href="{% static 'img/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-plus"></i></a>
+              <a href="{% url 'website:portfolio' %}" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <img src="{% static 'img/portfolio/portfolio-3.jpg' %}" class="img-fluid" alt="Imperial">
             <div class="portfolio-info">
               <h4>App 2</h4>
               <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              <a href="{% static 'img/portfolio/portfolio-3.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bi bi-plus"></i></a>
+              <a href="{% url 'website:portfolio' %}" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <img src="{% static 'img/portfolio/portfolio-4.jpg' %}" class="img-fluid" alt="Imperial">
             <div class="portfolio-info">
               <h4>Card 2</h4>
               <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              <a href="{% static 'img/portfolio/portfolio-4.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bi bi-plus"></i></a>
+              <a href="{% url 'website:portfolio' %}" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <img src="{% static 'img/portfolio/portfolio-5.jpg' %}" class="img-fluid" alt="Imperial">
             <div class="portfolio-info">
               <h4>Web 2</h4>
               <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              <a href="{% static 'img/portfolio/portfolio-5.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bi bi-plus"></i></a>
+              <a href="{% url 'website:portfolio' %}" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <img src="{% static 'img/portfolio/portfolio-6.jpg' %}" class="img-fluid" alt="Imperial">
             <div class="portfolio-info">
               <h4>App 3</h4>
               <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              <a href="{% static 'img/portfolio/portfolio-6.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bi bi-plus"></i></a>
+              <a href="{% url 'website:portfolio' %}" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <img src="{% static 'img/portfolio/portfolio-7.jpg' %}" class="img-fluid" alt="Imperial">
             <div class="portfolio-info">
               <h4>Card 1</h4>
               <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              <a href="{% static 'img/portfolio/portfolio-7.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bi bi-plus"></i></a>
+              <a href="{% url 'website:portfolio' %}" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <img src="{% static 'img/portfolio/portfolio-8.jpg' %}" class="img-fluid" alt="Imperial">
             <div class="portfolio-info">
               <h4>Card 3</h4>
               <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              <a href="{% static 'img/portfolio/portfolio-8.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bi bi-plus"></i></a>
+              <a href="{% url 'website:portfolio' %}" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <img src="{% static 'img/portfolio/portfolio-9.jpg' %}" class="img-fluid" alt="Imperial">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              <a href="{% static 'img/portfolio/portfolio-9.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-plus"></i></a>
+              <a href="{% url 'website:portfolio' %}" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
             </div>
           </div>
 
@@ -341,14 +325,14 @@
         <div class="row">
           <div class="col-md-3">
             <div class="profile">
-              <div class="pic"><img src="assets/img/client-1.jpg" alt=""></div>
+              <div class="pic"><img src="{% static 'img/client-1.jpg' %}" alt="Imperial"></div>
               <h4>Saul Goodman</h4>
               <span>Lawless Inc</span>
             </div>
           </div>
           <div class="col-md-9">
             <div class="quote">
-              <b><img src="assets/img/quote_sign_left.png" alt=""></b> Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper. <small><img src="assets/img/quote_sign_right.png" alt=""></small>
+              <b><img src="{% static 'img/quote_sign_left.png' %}" alt="Imperial"></b> Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper. <small><img src="{% static 'img/quote_sign_right.png' %}" alt="Imperial"></small>
             </div>
           </div>
         </div>
@@ -356,12 +340,12 @@
         <div class="row">
           <div class="col-md-9">
             <div class="quote">
-              <b><img src="assets/img/quote_sign_left.png" alt=""></b> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis architecto beatae. <small><img src="assets/img/quote_sign_right.png" alt=""></small>
+              <b><img src="{% static 'img/quote_sign_left.png' %}" alt="Imperial"></b> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis architecto beatae. <small><img src="{% static 'img/quote_sign_right.png' %}" alt="Imperial"></small>
             </div>
           </div>
           <div class="col-md-3">
             <div class="profile">
-              <div class="pic"><img src="assets/img/client-2.jpg" alt=""></div>
+              <div class="pic"><img src="{% static 'img/client-2.jpg' %}" alt="Imperial"></div>
               <h4>Sara Wilsson</h4>
               <span>Odeo Inc</span>
             </div>
@@ -385,56 +369,56 @@
         <div class="row">
           <div class="col-md-3">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/team-1.jpg' %}" alt="Imperial"></div>
               <h4>Walter White</h4>
               <span>Chief Executive Officer</span>
               <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-md-3">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/team-2.jpg' %}" alt="Imperial"></div>
               <h4>Sarah Jhinson</h4>
               <span>Product Manager</span>
               <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-md-3">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/team-3.jpg' %}" alt="Imperial"></div>
               <h4>William Anderson</h4>
               <span>CTO</span>
               <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-md-3">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-4.jpg" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/team-4.jpg' %}" alt="Imperial"></div>
               <h4>Amanda Jepson</h4>
               <span>Accountant</span>
               <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -459,17 +443,17 @@
             <div class="info">
               <div>
                 <i class="bi bi-geo-alt"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
+                <p>A108 Adam Street<br>New York, NY 11228</p>
               </div>
 
               <div>
                 <i class="bi bi-envelope"></i>
-                <p>info@example.com</p>
+                <p>Imperial@gmail.com</p>
               </div>
 
               <div>
                 <i class="bi bi-phone"></i>
-                <p>+1 5589 55488 55s</p>
+                <p>+021 11228 777s</p>
               </div>
 
             </div>
@@ -477,7 +461,8 @@
 
           <div class="col-lg-5 col-md-8">
             <div class="form">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form action="{% url 'website:index' %}" method="post" role="form">
+                {% csrf_token %}
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
@@ -491,11 +476,11 @@
                   <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                 </div>
                 <div class="my-3">
-                  <div class="loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="php-email-form">
+                  <div class="text-center"><button type="submit">Send Message</button></div>
+                </div>
               </form>
             </div>
           </div>
@@ -512,7 +497,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="copyright">
-            &copy; Copyright <strong>Imperial Theme</strong>. All Rights Reserved
+            Developed by <a href="https://amirhamidi.herokuapp.com">Amir Hamidi</a>
           </div>
           <div class="credits">
             <!--
@@ -532,16 +517,16 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/typed.js/typed.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 
